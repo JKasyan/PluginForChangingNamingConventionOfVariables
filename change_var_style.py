@@ -16,7 +16,7 @@ class ChangeVarStyleCommand(sublime_plugin.TextCommand):
 				view.replace(edit, select[0], result)
 
 def checkStrategy(row):
-	if '_' in selected_as_str:
+	if '_' in row:
 		return ChangeUnderscoreOnUppercaseStrategy()
 	else:
 		return ChangeUppercaseOnUnderscoreStrategy()
